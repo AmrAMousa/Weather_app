@@ -10,7 +10,7 @@ class WeatherModel {
   fetchData(http.Client client, double latitude, double longitude) async {
     final response =
     await client.get(
-        'https://api.darksky.net/forecast/your Key/$latitude,$longitude');
+        'https://api.darksky.net/forecast/Your_Key/$latitude,$longitude');
     final parsedJson = jsonDecode(response.body);
     currently =parsedJson['currently'];
     timezone =parsedJson['timezone'];
